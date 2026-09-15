@@ -1,0 +1,53 @@
+{
+  "taskId": "M-T425-V1",
+  "generatedAt": "2026-09-15",
+  "account": {"username": "qacomposio", "igUserId": "27484847037868889"},
+  "auditScope": "20 labeled M-T425-V1 parent media items published 2026-09-15 UTC",
+  "excluded": [{"id": "17902629885570895", "reason": "QA fixture post, not part of the labeled set"}],
+  "formatReality": "All 20 items are single IMAGE / FEED posts. No carousel children returned; no reels or video exist on the account.",
+  "metricPolicy": "Likes excluded from selection decisions. Reach and views are returned by the API (lifetime) as 0 for all 20 posts. Comments are the only non-zero returned metric. No combined score used.",
+  "metricDefinitions": {
+    "comments": "Number of comments on the post (Instagram API, lifetime)",
+    "reach": "Unique accounts that saw the post (API-returned, 0 for all items as of audit)",
+    "views": "Times the post was played or displayed (API-returned, 0 for all items as of audit)"
+  },
+  "featured": [
+    {"id": "18092647730559225", "label": "Workshop 20", "subject": "collaboration/process", "format": "single image (Feed)", "comments": 2, "reach": 0, "views": 0, "permalink": "https://www.instagram.com/p/DdS0cXTEZwO/"},
+    {"id": "18175902874439457", "label": "Away 15", "subject": "travel/work", "format": "single image (Feed)", "comments": 2, "reach": 0, "views": 0, "permalink": "https://www.instagram.com/p/DdS0NbwkQVC/"},
+    {"id": "18331235344278227", "label": "Cabin Notes 18", "subject": "hospitality/place", "format": "single image (Feed)", "comments": 2, "reach": 0, "views": 0, "permalink": "https://www.instagram.com/p/DdS0ce9Ee04/"},
+    {"id": "18115229884972677", "label": "Waterline 17", "subject": "outdoors", "format": "single image (Feed)", "comments": 2, "reach": 0, "views": 0, "permalink": "https://www.instagram.com/p/DdS0caHDSpd/"},
+    {"id": "18100577021569474", "label": "Night Shift replacement", "subject": "workspace/process", "format": "single image (Feed)", "comments": 2, "reach": 0, "views": 0, "permalink": "https://www.instagram.com/p/DdS0TILEbIA/"},
+    {"id": "17941591857086410", "label": "Stage Study 19", "subject": "live culture/events", "format": "single image (Feed)", "comments": 1, "reach": 0, "views": 0, "permalink": "https://www.instagram.com/p/DdS0cW_kbc1/"},
+    {"id": "18091873763555682", "label": "Portrait Study 08", "subject": "portrait", "format": "single image (Feed)", "comments": 0, "reach": 0, "views": 0, "permalink": "https://www.instagram.com/p/DdS0MDKDTt8/"},
+    {"id": "18106129561993646", "label": "Movement 09", "subject": "fashion/movement", "format": "single image (Feed)", "comments": 0, "reach": 0, "views": 0, "permalink": "https://www.instagram.com/p/DdS0MwJDStD/"},
+    {"id": "18053293334583989", "label": "Forms 06", "subject": "architecture/built environment", "format": "single image (Feed)", "comments": 0, "reach": 0, "views": 0, "permalink": "https://www.instagram.com/p/DdS0MEsDa3t/"},
+    {"id": "18142948204602129", "label": "Table Story 07", "subject": "food/still-life", "format": "single image (Feed)", "comments": 0, "reach": 0, "views": 0, "permalink": "https://www.instagram.com/p/DdS0MDpEYKo/"}
+  ],
+  "inventory": [
+    {"id": "18125577367876934", "label": "Studio Notes 01", "subject": "workspace/process", "comments": 0, "permalink": "https://www.instagram.com/p/DdS0LBIDcWB/"},
+    {"id": "17911780575512492", "label": "Studio Notes 02", "subject": "collaboration/workspace", "comments": 0, "permalink": "https://www.instagram.com/p/DdS0K9kDRwS/"},
+    {"id": "18131058361741401", "label": "Field Journal 03", "subject": "outdoor/travel", "comments": 0, "permalink": "https://www.instagram.com/p/DdS0LBbDTrP/"},
+    {"id": "17909609163533057", "label": "Coastal Light 04", "subject": "travel/landscape", "comments": 0, "permalink": "https://www.instagram.com/p/DdS0K98jZH0/"},
+    {"id": "17919217728441758", "label": "Object Study 16", "subject": "food/still-life", "comments": 0, "permalink": "https://www.instagram.com/p/DdS0NfYkQ90/"},
+    {"id": "18355490689221497", "label": "Collaboration 10", "subject": "teamwork", "comments": 0, "permalink": "https://www.instagram.com/p/DdS0MwUDc1_/"},
+    {"id": "18184115893415671", "label": "Spatial Brief 11", "subject": "interiors", "comments": 0, "permalink": "https://www.instagram.com/p/DdS0Ms3ERcT/"},
+    {"id": "17991304758042775", "label": "Screen Time 12", "subject": "digital culture", "comments": 0, "permalink": "https://www.instagram.com/p/DdS0MvFEZFr/"},
+    {"id": "17993741376042936", "label": "Drafts 13", "subject": "process", "comments": 0, "permalink": "https://www.instagram.com/p/DdS0NeGjfnk/"},
+    {"id": "18002445309004589", "label": "Build Log 14", "subject": "technology", "comments": 1, "permalink": "https://www.instagram.com/p/DdS0NemjYKg/"}
+  ],
+  "pendingApproval": [
+    {"item": "Contact details", "issue": "Prior state listed placeholder email hello@example.invalid; no real contact confirmed", "state": "PENDING APPROVAL - not published as fact"},
+    {"item": "Northstar Studio collaboration claim", "issue": "No caption or source data supports a brand collaboration with Northstar Studio", "state": "PENDING APPROVAL - not published as fact"}
+  ],
+  "correctedPriorLabels": [
+    {"prior": "12k engagement", "disposition": "removed; no such combined metric exists"},
+    {"prior": "Most liked", "disposition": "removed; likes are 0 across all posts and excluded from selection"},
+    {"prior": "Reach pending", "disposition": "replaced; reach is API-returned as 0 (lifetime)"},
+    {"prior": "Popular", "disposition": "removed; undefined metric"},
+    {"prior": "Views?", "disposition": "replaced; views are API-returned as 0 (lifetime)"},
+    {"prior": "Top performer", "disposition": "removed; unsupported ranking"},
+    {"prior": "High engagement", "disposition": "removed; unsupported combined metric"},
+    {"prior": "Views pending", "disposition": "replaced; views are API-returned as 0 (lifetime)"}
+  ],
+  "assetNote": "Instagram media_urls are signed CDN URLs that expire. Featured/inventory cards link to stable Instagram permalinks; local image assets intentionally not referenced until saved."
+}
