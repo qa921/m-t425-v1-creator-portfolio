@@ -1,0 +1,9 @@
+{
+  "name": "m-t425-v1-creator-portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Creator portfolio site for M-T425-V1. Static site; build copies public/ to dist/.",
+  "scripts": {
+    "build": "mkdir -p dist && cp -r public/. dist/"
+  }
+}
