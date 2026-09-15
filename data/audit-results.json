@@ -44,7 +44,7 @@
     {"item": "Reels", "issue": "No reels exist; two source-video containers (18129047179753804, 18129047242753804) failed processing with ERROR and have no published media ID", "state": "PENDING EXCEPTION - recorded, no reel content invented"},
     {"item": "Contact details", "issue": "Prior state listed placeholder email hello@example.invalid; no real contact confirmed", "state": "PENDING APPROVAL - not published as fact"},
     {"item": "Northstar Studio collaboration claim", "issue": "No caption or source data supports a brand collaboration with Northstar Studio", "state": "PENDING APPROVAL - not published as fact"},
-    {"item": "Image assets", "issue": "Instagram media_urls are signed CDN URLs that expire; no images saved to stable repo paths yet", "state": "PENDING - cards link to stable Instagram permalinks instead"}
+    {"item": "Image assets", "issue": "No image files saved to stable repo paths; Instagram CDN URLs expire; links are references, not assets", "state": "NOT YET DONE - each asset must be fetched from source, verified, and stored before display"}
   ],
   "correctedPriorLabels": [
     {"prior": "12k engagement", "disposition": "removed; no such combined metric exists"},
@@ -59,5 +59,5 @@
     {"prior": "Material Sequence as single IMAGE", "disposition": "corrected to CAROUSEL_ALBUM with two verified children"},
     {"prior": "QA fixture featured as 'Campaign still'", "disposition": "excluded; disposable test post"}
   ],
-  "assetNote": "Instagram media_urls are signed CDN URLs that expire. Featured/inventory cards link to stable Instagram permalinks; local image assets intentionally not referenced until saved."
+  "assetNote": "No image assets have been saved to stable repository paths yet. Instagram media_urls are signed CDN URLs that expire. Featured/inventory cards link to stable Instagram permalinks as references only; a link is not the asset. Each image must be fetched from its source, verified against its source media ID, and stored in the repo before it is displayed on the site."
 }
