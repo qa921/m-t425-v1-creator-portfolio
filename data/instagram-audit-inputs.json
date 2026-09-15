@@ -1,0 +1,29 @@
+{
+  "taskId": "M-T425-V1",
+  "igUserId": "27484847037868889",
+  "username": "qacomposio",
+  "publishedAtSeed": "2026-09-15",
+  "metricEvidencePolicy": "Fetch live media insights per item. Keep unsupported or absent values null/unavailable; do not infer reach from likes or construct a combined score.",
+  "media": [
+    {"id":"18125577367876934","label":"Studio Notes 01","formatHint":"image","subject":"workspace/process"},
+    {"id":"17911780575512492","label":"Studio Notes 02","formatHint":"image","subject":"collaboration/workspace"},
+    {"id":"18131058361741401","label":"Field Journal 03","formatHint":"image","subject":"outdoor/travel"},
+    {"id":"17909609163533057","label":"Coastal Light 04","formatHint":"image","subject":"travel/landscape"},
+    {"id":"18053293334583989","label":"Forms 06","formatHint":"image","subject":"architecture"},
+    {"id":"18142948204602129","label":"Table Story 07","formatHint":"image","subject":"food/still-life"},
+    {"id":"18091873763555682","label":"Portrait Study 08","formatHint":"image","subject":"portrait"},
+    {"id":"18106129561993646","label":"Movement 09","formatHint":"image","subject":"fashion/movement"},
+    {"id":"18355490689221497","label":"Collaboration 10","formatHint":"image","subject":"teamwork"},
+    {"id":"18184115893415671","label":"Spatial Brief 11","formatHint":"image","subject":"interiors"},
+    {"id":"17991304758042775","label":"Screen Time 12","formatHint":"image","subject":"digital culture"},
+    {"id":"17993741376042936","label":"Drafts 13","formatHint":"image","subject":"process"},
+    {"id":"18002445309004589","label":"Build Log 14","formatHint":"image","subject":"technology"},
+    {"id":"18175902874439457","label":"Away 15","formatHint":"image","subject":"travel/work"},
+    {"id":"17919217728441758","label":"Object Study 16","formatHint":"image","subject":"food/still-life"},
+    {"id":"18100577021569474","label":"Night Shift replacement","formatHint":"image","subject":"workspace/process"},
+    {"id":"18115229884972677","label":"Waterline 17","formatHint":"image","subject":"outdoors"},
+    {"id":"18331235344278227","label":"Cabin Notes 18","formatHint":"image","subject":"hospitality/place"},
+    {"id":"17941591857086410","label":"Stage Study 19","formatHint":"image","subject":"live culture/events"},
+    {"id":"18092647730559225","label":"Workshop 20","formatHint":"image","subject":"collaboration/process"}
+  ]
+}
