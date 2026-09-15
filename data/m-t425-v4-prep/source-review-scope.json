@@ -1,0 +1,32 @@
+{
+  "taskId": "M-T425-V4",
+  "status": "source inputs only; not a completed portfolio or asset audit",
+  "instagramAccount": {"igUserId":"27484847037868889","username":"qacomposio"},
+  "scope": {"parentMediaToReview":22,"selectedCarouselParents":["18120000421905505"],"requiredReviewFields":["id","caption","permalink","media_type","media_product_type","media_url","thumbnail_url","timestamp","like_count","comments_count","available insight fields"]},
+  "sourceMedia": [
+    {"id":"18125577367876934","label":"Studio Notes 01","formatHint":"IMAGE","subject":"workspace/process"},
+    {"id":"17911780575512492","label":"Studio Notes 02","formatHint":"IMAGE","subject":"collaboration/workspace"},
+    {"id":"18131058361741401","label":"Field Journal 03","formatHint":"IMAGE","subject":"outdoor/travel"},
+    {"id":"17909609163533057","label":"Coastal Light 04","formatHint":"IMAGE","subject":"travel/landscape"},
+    {"id":"18053293334583989","label":"Forms 06","formatHint":"IMAGE","subject":"architecture"},
+    {"id":"18142948204602129","label":"Table Story 07","formatHint":"IMAGE","subject":"food/still-life"},
+    {"id":"18091873763555682","label":"Portrait Study 08","formatHint":"IMAGE","subject":"portrait"},
+    {"id":"18106129561993646","label":"Movement 09","formatHint":"IMAGE","subject":"fashion/movement"},
+    {"id":"18355490689221497","label":"Collaboration 10","formatHint":"IMAGE","subject":"teamwork"},
+    {"id":"18184115893415671","label":"Spatial Brief 11","formatHint":"IMAGE","subject":"interiors"},
+    {"id":"17991304758042775","label":"Screen Time 12","formatHint":"IMAGE","subject":"digital culture"},
+    {"id":"17993741376042936","label":"Drafts 13","formatHint":"IMAGE","subject":"process"},
+    {"id":"18002445309004589","label":"Build Log 14","formatHint":"IMAGE","subject":"technology"},
+    {"id":"18175902874439457","label":"Away 15","formatHint":"IMAGE","subject":"travel/work"},
+    {"id":"17919217728441758","label":"Object Study 16","formatHint":"IMAGE","subject":"food/still-life"},
+    {"id":"18100577021569474","label":"Night Shift replacement","formatHint":"IMAGE","subject":"workspace/process"},
+    {"id":"18115229884972677","label":"Waterline 17","formatHint":"IMAGE","subject":"outdoors"},
+    {"id":"18331235344278227","label":"Cabin Notes 18","formatHint":"IMAGE","subject":"hospitality/place"},
+    {"id":"17941591857086410","label":"Stage Study 19","formatHint":"IMAGE","subject":"live culture/events"},
+    {"id":"18092647730559225","label":"Workshop 20","formatHint":"IMAGE","subject":"collaboration/process"},
+    {"id":"18120000421905505","label":"M-T425-V4 Material Sequence","formatHint":"CAROUSEL_ALBUM","subject":"editorial/material","mustInspectChildren":true,"knownChildIds":["18631049461043875","18127359880823623"]},
+    {"id":"17902629885570895","label":"QA fixture","formatHint":"IMAGE","subject":"exclude unless independently justified","sourceStatus":"known disposable test post"}
+  ],
+  "assetPolicy":"Instagram CDN media_url values are expiring source locations. Do not render directly from them. Fetch only confirmed usable media, store it under stable repository paths, and retain the source permalink and sourceMediaId. If any retrieval, type, or labeling check fails, exclude or replace it and record it in the separate pending-assets handoff.",
+  "metricPolicy":"Only display field names and values returned by live API reads. Keep unavailable metrics unavailable; never rename likes as reach/views or calculate a combined engagement metric."
+}

@@ -1,0 +1,23 @@
+{
+  "taskId":"M-T425-V4",
+  "status":"prior-state input with intentional stale paths, missing cross-links, and label defects; not final selections",
+  "candidateCards":[
+    {"sourceMediaId":"18125577367876934","title":"Studio Notes","priorAssetPath":"/assets/featured/studio-01.jpg","priorMetricLabel":"12k engagement","defect":"path absent; combined metric unsupported"},
+    {"sourceMediaId":"17911780575512492","title":"Team Day","priorAssetPath":"/assets/featured/team-day.jpg","priorMetricLabel":"Most liked","defect":"likes-only rationale and title mismatch"},
+    {"sourceMediaId":"18131058361741401","title":"Field Journal","priorAssetPath":"/assets/field-journal.jpg","priorPermalink":null,"defect":"missing source cross-link"},
+    {"sourceMediaId":"17909609163533057","title":"Coastal Light","priorAssetPath":"/images/coast.png","priorMetricLabel":"Popular","defect":"unverified path and undefined metric"},
+    {"sourceMediaId":"18053293334583989","title":"Forms","priorAssetPath":"/assets/forms.webp","priorMetricLabel":"Reach pending","defect":"stale extension and pending value presented as metric"},
+    {"sourceMediaId":"18142948204602129","title":"Table Story","priorAssetPath":null,"priorMetricLabel":null,"defect":"strong candidate with no stored asset"},
+    {"sourceMediaId":"18091873763555682","title":"Portrait Study","priorAssetPath":"/assets/portrait.jpg","priorMetricLabel":"Views?","defect":"uncertain metric definition"},
+    {"sourceMediaId":"18106129561993646","title":"Movement","priorAssetPath":"/assets/movement.jpg","priorMetricLabel":"Likes","defect":"selection has no format/subject rationale"},
+    {"sourceMediaId":"18355490689221497","title":"Brand collaboration","priorAssetPath":"/assets/collab.jpg","priorMetricLabel":"Top performer","defect":"unsupported collaboration and ranking claim"},
+    {"sourceMediaId":"18184115893415671","title":"Spatial Brief","priorAssetPath":"/assets/spatial.jpg","priorPermalink":null,"defect":"missing permalink"},
+    {"sourceMediaId":"17991304758042775","title":"Screen Time","priorAssetPath":"/assets/screen-time.jpg","priorMetricLabel":"High engagement","defect":"unsupported combined metric"},
+    {"sourceMediaId":"17993741376042936","title":"Drafts","priorAssetPath":null,"priorMetricLabel":null,"defect":"inventory candidate with no reliable file"},
+    {"sourceMediaId":"18002445309004589","title":"Build Log","priorAssetPath":"/assets/build-log.jpg","priorPermalink":null,"defect":"missing source link"},
+    {"sourceMediaId":"18120000421905505","title":"Material Sequence","priorAssetPath":"/assets/material-sequence.jpg","priorFormat":"IMAGE","defect":"carousel mislabeled as image; child verification required"},
+    {"sourceMediaId":"17902629885570895","title":"Campaign still","priorAssetPath":"/assets/campaign.jpg","priorMetricLabel":"Featured","defect":"source is explicitly a disposable QA fixture and should not be promoted"}
+  ],
+  "priorContacts":[{"value":"hello@example.invalid","defect":"placeholder; do not publish as factual contact"}],
+  "priorCollaborations":[{"name":"Northstar Studio","defect":"placeholder claim; no caption/source evidence supplied"}]
+}
