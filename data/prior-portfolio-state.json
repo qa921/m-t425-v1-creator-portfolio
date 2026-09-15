@@ -1,0 +1,20 @@
+{
+  "taskId": "M-T425-V1",
+  "status": "prior-state; intentionally incomplete and inconsistent",
+  "cards": [
+    {"sourceMediaId":"18125577367876934","title":"Studio Notes","assetPath":"/assets/featured/studio-01.jpg","metricLabel":"12k engagement","status":"stale: no such saved asset; combined metric unsupported"},
+    {"sourceMediaId":"17911780575512492","title":"Team Day","assetPath":"/assets/featured/team-day.jpg","metricLabel":"Most liked","status":"stale: likes-only rationale"},
+    {"sourceMediaId":"18131058361741401","title":"Field Journal","assetPath":"/assets/field-journal.jpg","metricLabel":"Reach pending","status":"missing cross-link to media permalink"},
+    {"sourceMediaId":"18053293334583989","title":"Forms","assetPath":"/images/forms.png","metricLabel":"Popular","status":"ambiguous metric and unsupported asset path"},
+    {"sourceMediaId":"18142948204602129","title":"Table Story","assetPath":null,"metricLabel":null,"status":"candidate excluded from stale featured set"},
+    {"sourceMediaId":"18091873763555682","title":"Portrait Study","assetPath":"/assets/portrait.jpg","metricLabel":"Views?","status":"uncertain metric definition"},
+    {"sourceMediaId":"18106129561993646","title":"Movement","assetPath":"/assets/movement.jpg","metricLabel":"Likes","status":"needs format/subject rationale"},
+    {"sourceMediaId":"18355490689221497","title":"Brand collaboration","assetPath":"/assets/collab.jpg","metricLabel":"Top performer","status":"unsupported collaboration claim and unsupported ranking"},
+    {"sourceMediaId":"18184115893415671","title":"Spatial Brief","assetPath":"/assets/spatial.jpg","metricLabel":"—","status":"missing permalink"},
+    {"sourceMediaId":"17991304758042775","title":"Screen Time","assetPath":"/assets/screen-time.jpg","metricLabel":"High engagement","status":"unsupported combined metric"},
+    {"sourceMediaId":"17993741376042936","title":"Drafts","assetPath":null,"metricLabel":null,"status":"inventory-only candidate"},
+    {"sourceMediaId":"18002445309004589","title":"Build Log","assetPath":"/assets/build-log.jpg","metricLabel":"Views pending","status":"missing source link"}
+  ],
+  "contact": {"email":"hello@example.invalid","status":"placeholder; must be replaced or approval-flagged"},
+  "collaborations": [{"name":"Northstar Studio","status":"placeholder claim; do not publish as fact without approval"}]
+}
