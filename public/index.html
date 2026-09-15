@@ -8,7 +8,7 @@
   :root { --ink:#1a1a1a; --muted:#666; --line:#e4e4e4; --accent:#2f5d50; --flag:#8a5a00; --bg:#fafaf8; }
   * { box-sizing:border-box; margin:0; padding:0; }
   body { font-family: Georgia, 'Times New Roman', serif; color:var(--ink); background:var(--bg); line-height:1.6; }
-  .wrap { max-width:960px; margin:0 auto; padding:48px 24px 80px; }
+  .wrap{ max-width:960px; margin:0 auto; padding:48px 24px 80px; }
   header h1 { font-size:2.4rem; letter-spacing:-0.02em; }
   header p.lede { font-size:1.15rem; color:var(--muted); margin-top:12px; max-width:640px; }
   section { margin-top:56px; }
@@ -19,11 +19,15 @@
   .stat .n { font-size:1.6rem; }
   .stat .k { color:var(--muted); font-size:0.85rem; }
   .note { color:var(--muted); font-size:0.9rem; margin-top:12px; }
+  .filters { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 20px; }
+  .filters button { font-family:inherit; font-size:0.85rem; border:1px solid var(--line); border-radius:999px; padding:4px 14px; background:#fff; color:var(--ink); cursor:pointer; }
+  .filters button.active { background:var(--accent); color:#fff; border-color:var(--accent); }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
   .card { border:1px solid var(--line); border-radius:10px; background:#fff; padding:18px; display:flex; flex-direction:column; gap:8px; }
   .card .tile { height:120px; border-radius:6px; background:linear-gradient(135deg,#dfe7e3,#f2ede4); display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:0.85rem; font-style:italic; }
   .meta { font-size:0.85rem; color:var(--muted); }
   .metric { display:inline-block; font-size:0.8rem; border:1px solid var(--line); border-radius:999px; padding:2px 10px; color:var(--ink); background:#fff; }
+  .metric.zero { color:var(--muted); }
   a { color:var(--accent); }
   .flag { border:1px dashed var(--flag); background:#fff8ec; border-radius:10px; padding:16px 18px; margin-top:12px; }
   .flag strong { color:var(--flag); }
@@ -36,68 +40,84 @@
 
 <header>
   <h1>qacomposio</h1>
-  <p class="lede">Visual creator working across workspace and process, outdoor and travel, built environment, portrait and style, food and still-life, live culture, and collaboration. This portfolio is built from 20 posts published to Instagram on 2026-09-15, audited against live API data.</p>
+  <p class="lede">Visual creator working across workspace and process, outdoor and travel, built environment, portrait and style, food and still-life, live culture, and collaboration &mdash; the common thread is people making things together and the places that hold them. This portfolio was refreshed from a live audit of the Instagram account on 2026-09-15: 22 media records reviewed, including every carousel slide, with metrics taken exactly as the Instagram API returned them.</p>
 </header>
 
 <section id="media-kit">
   <h2>Media kit &amp; measurement summary</h2>
   <div class="summary">
-    <div class="stat"><div class="n">20</div><div class="k">posts audited (all single-image Feed posts)</div></div>
-    <div class="stat"><div class="n">12</div><div class="k">comments, total (across 7 posts)</div></div>
-    <div class="stat"><div class="n">0</div><div class="k">reach — API-returned, lifetime, all posts</div></div>
-    <div class="stat"><div class="n">0</div><div class="k">views — API-returned, lifetime, all posts</div></div>
+    <div class="stat"><div class="n">22</div><div class="k">media records reviewed (20 labeled posts &middot; 1 carousel &middot; 1 QA fixture excluded)</div></div>
+    <div class="stat"><div class="n">2</div><div class="k">carousel slides individually verified (Material Sequence)</div></div>
+    <div class="stat"><div class="n">47</div><div class="k">comments, total (across 15 posts) &mdash; the only non-zero engagement metric returned</div></div>
+    <div class="stat"><div class="n">0</div><div class="k">likes &mdash; API-returned, lifetime, all items</div></div>
+    <div class="stat"><div class="n">0</div><div class="k">reach &mdash; API-returned, lifetime, all items</div></div>
+    <div class="stat"><div class="n">0</div><div class="k">views &mdash; API-returned, lifetime, all items</div></div>
+    <div class="stat"><div class="n">0</div><div class="k">saved &amp; shares &mdash; API-returned, lifetime, all items</div></div>
   </div>
-  <p class="note">Metric definitions, per the Instagram API: <strong>comments</strong> = number of comments on the post; <strong>reach</strong> = unique accounts that saw the post; <strong>views</strong> = times the post was played or displayed. Posts went live on 2026-09-15 on a small account, so reach and views are returned as 0. Likes are not used to select or rank featured work. No combined engagement score is used. No reels or carousels exist on this account; all work is still photography.</p>
+  <p class="note">Metric definitions, per the Instagram API: <strong>comments</strong> = number of comments on the post; <strong>likes</strong> = number of likes; <strong>reach</strong> = unique accounts that saw the post; <strong>views</strong> = times the post was played or displayed; <strong>saved</strong> = saves of the post; <strong>shares</strong> = shares of the post. Each label is used only for its own value &mdash; nothing is renamed, combined, or estimated. The account is small and the posts went live on 2026-09-15, so likes, reach, views, saves, and shares are all returned as 0; comments are the only live response signal. No reels exist on this account (see Pending &amp; unsupported items). No combined engagement score is used anywhere on this page.</p>
 </section>
 
 <section id="featured">
   <h2>Featured work</h2>
-  <p class="note">Selected for subject range and format within still photography — covering all seven subject territories. Cards link to the original Instagram posts. Local image assets are intentionally not referenced until saved from the source; the API's media URLs are expiring CDN links.</p>
-  <div class="grid">
+  <p class="note">Twelve pieces curated for range as well as response: they span ten subject territories and both published formats (single image and carousel), weighted toward the posts the community actually responded to. Comments shown are the API-returned lifetime count for each post. Cards link to the original Instagram posts. Local image assets are intentionally not referenced until saved from the source; the API's media URLs are expiring CDN links.</p>
+  <div class="filters" data-target="featured-grid">
+    <button class="active" data-format="all">All formats</button>
+    <button data-format="image">Single images (11)</button>
+    <button data-format="carousel">Carousels (1)</button>
+  </div>
+  <div class="grid" id="featured-grid">
 
-    <div class="card"><div class="tile">single image</div><h3>Workshop 20</h3><p class="meta">Collaboration / process — &ldquo;ideas made visible together.&rdquo; Facilitated-session story; anchors the collaboration territory.</p><span class="metric">Comments: 2</span><a href="https://www.instagram.com/p/DdS0cXTEZwO/">View on Instagram</a></div>
+    <div class="card" data-format="image"><div class="tile">single image</div><h3>Cabin Notes 18</h3><p class="meta">Hospitality / place &mdash; &ldquo;place, craft, and material.&rdquo; Hospitality direction study, and the most-discussed piece in the set.</p><span class="metric">Comments: 6</span><a href="https://www.instagram.com/p/DdS0ce9Ee04/">View on Instagram</a></div>
 
-    <div class="card"><div class="tile">single image</div><h3>Away 15</h3><p class="meta">Travel / work — &ldquo;remote work, real terrain.&rdquo; Campaign-style visual merging travel with working practice.</p><span class="metric">Comments: 2</span><a href="https://www.instagram.com/p/DdS0NbwkQVC/">View on Instagram</a></div>
+    <div class="card" data-format="image"><div class="tile">single image</div><h3>Workshop 20</h3><p class="meta">Collaboration / process &mdash; &ldquo;ideas made visible together.&rdquo; Facilitated-session story; anchors the collaboration territory.</p><span class="metric">Comments: 5</span><a href="https://www.instagram.com/p/DdS0cXTEZwO/">View on Instagram</a></div>
 
-    <div class="card"><div class="tile">single image</div><h3>Cabin Notes 18</h3><p class="meta">Hospitality / place — &ldquo;place, craft, and material.&rdquo; Hospitality direction study; commercial-environment thinking.</p><span class="metric">Comments: 2</span><a href="https://www.instagram.com/p/DdS0ce9Ee04/">View on Instagram</a></div>
+    <div class="card" data-format="image"><div class="tile">single image</div><h3>Waterline 17</h3><p class="meta">Outdoors &mdash; &ldquo;landscape, calm, scale.&rdquo; Nature campaign visual; restraint and negative space.</p><span class="metric">Comments: 5</span><a href="https://www.instagram.com/p/DdS0caHDSpd/">View on Instagram</a></div>
 
-    <div class="card"><div class="tile">single image</div><h3>Waterline 17</h3><p class="meta">Outdoors — &ldquo;landscape, calm, scale.&rdquo; Nature campaign visual; restraint and negative space.</p><span class="metric">Comments: 2</span><a href="https://www.instagram.com/p/DdS0caHDSpd/">View on Instagram</a></div>
+    <div class="card" data-format="image"><div class="tile">single image</div><h3>Away 15</h3><p class="meta">Travel / work &mdash; &ldquo;remote work, real terrain.&rdquo; Campaign-style visual merging travel with working practice.</p><span class="metric">Comments: 5</span><a href="https://www.instagram.com/p/DdS0NbwkQVC/">View on Instagram</a></div>
 
-    <div class="card"><div class="tile">single image</div><h3>Night Shift replacement</h3><p class="meta">Workspace / process — &ldquo;city-at-work perspective.&rdquo; Editorial process still; strongest workspace piece in the set.</p><span class="metric">Comments: 2</span><a href="https://www.instagram.com/p/DdS0TILEbIA/">View on Instagram</a></div>
+    <div class="card" data-format="image"><div class="tile">single image</div><h3>Night Shift replacement</h3><p class="meta">Workspace / process &mdash; &ldquo;city-at-work perspective.&rdquo; Editorial process still; the strongest workspace piece in the set.</p><span class="metric">Comments: 5</span><a href="https://www.instagram.com/p/DdS0TILEbIA/">View on Instagram</a></div>
 
-    <div class="card"><div class="tile">single image</div><h3>Stage Study 19</h3><p class="meta">Live culture / events — &ldquo;atmosphere before the crowd arrives.&rdquo; Music and event visual; the set's only culture/events entry.</p><span class="metric">Comments: 1</span><a href="https://www.instagram.com/p/DdS0cW_kbc1/">View on Instagram</a></div>
+    <div class="card" data-format="image"><div class="tile">single image</div><h3>Stage Study 19</h3><p class="meta">Live culture / events &mdash; &ldquo;atmosphere before the crowd arrives.&rdquo; Music and event visual; the set&rsquo;s only culture/events entry.</p><span class="metric">Comments: 4</span><a href="https://www.instagram.com/p/DdS0cW_kbc1/">View on Instagram</a></div>
 
-    <div class="card"><div class="tile">single image</div><h3>Portrait Study 08</h3><p class="meta">Portrait — &ldquo;direct light, quiet color.&rdquo; Portrait direction reference with a clear lighting point of view.</p><span class="metric">Comments: 0</span><a href="https://www.instagram.com/p/DdS0MDKDTt8/">View on Instagram</a></div>
+    <div class="card" data-format="image"><div class="tile">single image</div><h3>Build Log 14</h3><p class="meta">Technology &mdash; &ldquo;making digital work visible.&rdquo; Developer editorial still; promoted into the featured set after drawing 4 comments.</p><span class="metric">Comments: 4</span><a href="https://www.instagram.com/p/DdS0NemjYKg/">View on Instagram</a></div>
 
-    <div class="card"><div class="tile">single image</div><h3>Movement 09</h3><p class="meta">Fashion / movement — &ldquo;shape, fabric, gesture.&rdquo; A motion study in a still format — a deliberate craft signal.</p><span class="metric">Comments: 0</span><a href="https://www.instagram.com/p/DdS0MwJDStD/">View on Instagram</a></div>
+    <div class="card" data-format="image"><div class="tile">single image</div><h3>Object Study 16</h3><p class="meta">Food / still-life &mdash; &ldquo;color, produce, and composition.&rdquo; A studio experiment with a strong community response.</p><span class="metric">Comments: 4</span><a href="https://www.instagram.com/p/DdS0NfYkQ90/">View on Instagram</a></div>
 
-    <div class="card"><div class="tile">single image</div><h3>Forms 06</h3><p class="meta">Built environment — &ldquo;architecture as rhythm.&rdquo; Geometric counterweight to the organic outdoor work.</p><span class="metric">Comments: 0</span><a href="https://www.instagram.com/p/DdS0MEsDa3t/">View on Instagram</a></div>
+    <div class="card" data-format="image"><div class="tile">single image</div><h3>Screen Time 12</h3><p class="meta">Digital culture &mdash; &ldquo;digital culture and attention.&rdquo; Product narrative still with a point of view.</p><span class="metric">Comments: 2</span><a href="https://www.instagram.com/p/DdS0MvFEZFr/">View on Instagram</a></div>
 
-    <div class="card"><div class="tile">single image</div><h3>Table Story 07</h3><p class="meta">Food / still-life — &ldquo;coffee, notes, and a slow morning.&rdquo; Lifestyle editorial in a warmer register.</p><span class="metric">Comments: 0</span><a href="https://www.instagram.com/p/DdS0MDpEYKo/">View on Instagram</a></div>
+    <div class="card" data-format="image"><div class="tile">single image</div><h3>Spatial Brief 11</h3><p class="meta">Interiors &mdash; &ldquo;interiors with a point of view.&rdquo; Commercial environment study.</p><span class="metric">Comments: 2</span><a href="https://www.instagram.com/p/DdS0Ms3ERcT/">View on Instagram</a></div>
+
+    <div class="card" data-format="image"><div class="tile">single image</div><h3>Collaboration 10</h3><p class="meta">Teamwork &mdash; &ldquo;co-creation in practice.&rdquo; Team workshop story. (A prior draft titled this &ldquo;Brand collaboration&rdquo; and called it a &ldquo;Top performer&rdquo; &mdash; neither claim is supported, so both were removed.)</p><span class="metric">Comments: 1</span><a href="https://www.instagram.com/p/DdS0MwUDc1_/">View on Instagram</a></div>
+
+    <div class="card" data-format="carousel"><div class="tile">carousel &middot; 2 slides</div><h3>Material Sequence</h3><p class="meta">Editorial / material &mdash; &ldquo;two-frame carousel source for the verified-assets handoff.&rdquo; The account&rsquo;s only carousel; both slides were individually verified via the Instagram API. Newest piece in the set, so its community response has not started yet.</p><span class="metric zero">Comments: 0</span><a href="https://www.instagram.com/p/DdS8EuDlfoF/">View carousel on Instagram</a><p class="meta">Slides: <a href="https://www.instagram.com/p/DdS8DHBkZzB/">slide 1</a> &middot; <a href="https://www.instagram.com/p/DdS8DISkUBb/">slide 2</a></p></div>
 
   </div>
 </section>
 
 <section id="inventory">
   <h2>Browsable inventory</h2>
-  <p class="note">All remaining audited posts. Source media IDs retained for traceability. All are single-image Feed posts; comments shown as returned by the API.</p>
-  <div class="grid">
-    <div class="card"><h3>Studio Notes 01</h3><p class="meta">Workspace / process · Comments: 0 · Media ID 18125577367876934</p><a href="https://www.instagram.com/p/DdS0LBIDcWB/">View on Instagram</a></div>
-    <div class="card"><h3>Studio Notes 02</h3><p class="meta">Collaboration / workspace · Comments: 0 · Media ID 17911780575512492</p><a href="https://www.instagram.com/p/DdS0K9kDRwS/">View on Instagram</a></div>
-    <div class="card"><h3>Field Journal 03</h3><p class="meta">Outdoor / travel · Comments: 0 · Media ID 18131058361741401</p><a href="https://www.instagram.com/p/DdS0LBbDTrP/">View on Instagram</a></div>
-    <div class="card"><h3>Coastal Light 04</h3><p class="meta">Travel / landscape · Comments: 0 · Media ID 17909609163533057</p><a href="https://www.instagram.com/p/DdS0K98jZH0/">View on Instagram</a></div>
-    <div class="card"><h3>Object Study 16</h3><p class="meta">Food / still-life · Comments: 0 · Media ID 17919217728441758</p><a href="https://www.instagram.com/p/DdS0NfYkQ90/">View on Instagram</a></div>
-    <div class="card"><h3>Collaboration 10</h3><p class="meta">Teamwork · Comments: 0 · Media ID 18355490689221497</p><a href="https://www.instagram.com/p/DdS0MwUDc1_/">View on Instagram</a></div>
-    <div class="card"><h3>Spatial Brief 11</h3><p class="meta">Interiors · Comments: 0 · Media ID 18184115893415671</p><a href="https://www.instagram.com/p/DdS0Ms3ERcT/">View on Instagram</a></div>
-    <div class="card"><h3>Screen Time 12</h3><p class="meta">Digital culture · Comments: 0 · Media ID 17991304758042775</p><a href="https://www.instagram.com/p/DdS0MvFEZFr/">View on Instagram</a></div>
-    <div class="card"><h3>Drafts 13</h3><p class="meta">Process · Comments: 0 · Media ID 17993741376042936</p><a href="https://www.instagram.com/p/DdS0NeGjfnk/">View on Instagram</a></div>
-    <div class="card"><h3>Build Log 14</h3><p class="meta">Technology · Comments: 1 · Media ID 18002445309004589</p><a href="https://www.instagram.com/p/DdS0NemjYKg/">View on Instagram</a></div>
+  <p class="note">All remaining audited posts. Source media IDs retained for traceability. All are single-image Feed posts; comments shown exactly as returned by the API.</p>
+  <div class="filters" data-target="inventory-grid">
+    <button class="active" data-format="all">All formats</button>
+    <button data-format="image">Single images (9)</button>
+    <button data-format="carousel">Carousels (0)</button>
+  </div>
+  <div class="grid" id="inventory-grid">
+    <div class="card" data-format="image"><h3>Studio Notes 01</h3><p class="meta">Workspace / process &middot; Comments: 0 &middot; Media ID 18125577367876934</p><a href="https://www.instagram.com/p/DdS0LBIDcWB/">View on Instagram</a></div>
+    <div class="card" data-format="image"><h3>Studio Notes 02</h3><p class="meta">Collaboration / workspace &middot; Comments: 0 &middot; Media ID 17911780575512492</p><a href="https://www.instagram.com/p/DdS0K9kDRwS/">View on Instagram</a></div>
+    <div class="card" data-format="image"><h3>Field Journal 03</h3><p class="meta">Outdoor / travel &middot; Comments: 0 &middot; Media ID 18131058361741401</p><a href="https://www.instagram.com/p/DdS0LBbDTrP/">View on Instagram</a></div>
+    <div class="card" data-format="image"><h3>Coastal Light 04</h3><p class="meta">Travel / landscape &middot; Comments: 0 &middot; Media ID 17909609163533057</p><a href="https://www.instagram.com/p/DdS0K98jZH0/">View on Instagram</a></div>
+    <div class="card" data-format="image"><h3>Forms 06</h3><p class="meta">Architecture / built environment &middot; Comments: 0 &middot; Media ID 18053293334583989</p><a href="https://www.instagram.com/p/DdS0MEsDa3t/">View on Instagram</a></div>
+    <div class="card" data-format="image"><h3>Table Story 07</h3><p class="meta">Food / still-life &middot; Comments: 1 &middot; Media ID 18142948204602129</p><a href="https://www.instagram.com/p/DdS0MDpEYKo/">View on Instagram</a></div>
+    <div class="card" data-format="image"><h3>Portrait Study 08</h3><p class="meta">Portrait &middot; Comments: 1 &middot; Media ID 18091873763555682</p><a href="https://www.instagram.com/p/DdS0MDKDTt8/">View on Instagram</a></div>
+    <div class="card" data-format="image"><h3>Movement 09</h3><p class="meta">Fashion / movement &middot; Comments: 1 &middot; Media ID 18106129561993646</p><a href="https://www.instagram.com/p/DdS0MwJDStD/">View on Instagram</a></div>
+    <div class="card" data-format="image"><h3>Drafts 13</h3><p class="meta">Process &middot; Comments: 1 &middot; Media ID 17993741376042936</p><a href="https://www.instagram.com/p/DdS0NeGjfnk/">View on Instagram</a></div>
   </div>
 </section>
 
 <section id="collaborations">
   <h2>Collaborations</h2>
-  <p>Process collaboration is documented in the source captions: <em>Workshop 20</em> (&ldquo;facilitated session story&rdquo;) and <em>Collaboration 10</em> (&ldquo;co-creation in practice&rdquo;).</p>
+  <p>Process collaboration is documented in the source captions: <em>Workshop 20</em> (&ldquo;ideas made visible together&rdquo; &mdash; a facilitated-session story) and <em>Collaboration 10</em> (&ldquo;co-creation in practice&rdquo; &mdash; a team workshop story). Both describe the creator&rsquo;s own collaborative way of working; neither caption names an external brand or client.</p>
   <div class="flag"><strong>PENDING APPROVAL:</strong> A prior draft referenced a brand collaboration with &ldquo;Northstar Studio.&rdquo; No caption or source data supports that claim, so it is <strong>not published here as fact</strong>. It stays flagged until the account owner confirms it.</div>
 </section>
 
@@ -106,10 +126,36 @@
   <div class="flag"><strong>PENDING APPROVAL:</strong> Contact details are not confirmed. The prior draft contained a placeholder address, which has been removed rather than published. A real contact channel will appear here once the account owner approves it. In the meantime, reach out via <a href="https://www.instagram.com/qacomposio/">Instagram @qacomposio</a>.</div>
 </section>
 
+<section id="pending">
+  <h2>Pending &amp; unsupported items</h2>
+  <p class="note">Flagged instead of filled in, per the review requirements:</p>
+  <ul class="tight">
+    <li><strong>Reels:</strong> none exist on this account. Two attempted source-video containers (18129047179753804, 18129047242753804) failed processing with <code>ERROR</code> and produced no published media ID, so there is no reel material to show. This is recorded as a pending exception rather than replaced with invented content.</li>
+    <li><strong>Collaboration claims:</strong> the &ldquo;Northstar Studio&rdquo; claim and the prior &ldquo;Brand collaboration / Top performer&rdquo; card are unsupported by any caption or source data &mdash; flagged above, not published as fact.</li>
+    <li><strong>Assets:</strong> Instagram CDN media URLs are signed and expire. No image files have been saved to stable repository paths yet, so cards link to the original posts instead of rendering local images.</li>
+    <li><strong>Contact details:</strong> no confirmed contact channel exists; the placeholder address was removed and is pending approval.</li>
+    <li><strong>Excluded:</strong> one disposable QA-fixture post (media ID 17902629885570895, &ldquo;safe to delete&rdquo;) was reviewed and excluded from the portfolio.</li>
+  </ul>
+</section>
+
 <footer>
-  <p>Built from an audit of 20 Instagram posts (@qacomposio), published 2026-09-15. Metrics shown are exactly what the Instagram API returned at audit time: comments as labeled; reach and views returned as 0 (lifetime). Likes were excluded from selection. No combined engagement score is used anywhere on this page.</p>
+  <p>Refreshed from a live audit of 22 Instagram media records (@qacomposio), published 2026-09-15. Metrics shown are exactly what the Instagram API returned at audit time (lifetime): comments as labeled per post (47 total); likes, reach, views, saves, and shares returned as 0 for all items. No metric was renamed, combined, or estimated. Likes were not used to select or rank featured work; selection weighed subject range, format range, and the comments the community actually left.</p>
 </footer>
 
 </div>
+<script>
+  document.querySelectorAll('.filters').forEach(function (bar) {
+    var grid = document.getElementById(bar.dataset.target);
+    bar.addEventListener('click', function (e) {
+      if (e.target.tagName !== 'BUTTON') return;
+      bar.querySelectorAll('button').forEach(function (b) { b.classList.remove('active'); });
+      e.target.classList.add('active');
+      var f = e.target.dataset.format;
+      grid.querySelectorAll('.card').forEach(function (card) {
+        card.style.display = (f === 'all' || card.dataset.format === f) ? '' : 'none';
+      });
+    });
+  });
+</script>
 </body>
 </html>
